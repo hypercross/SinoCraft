@@ -1,9 +1,7 @@
 package SinoCraft;
 
-import SinoCraft.proxy.ServerProxy;
-import SinoCraft.blocks.BlockChrysanthemum;
-import SinoCraft.blocks.BlockPeony;
-import SinoCraft.blocks.BlockPrunusMume;
+import SinoCraft.Blocks.BlockPeony;
+import SinoCraft.Proxy.ServerProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -22,7 +20,7 @@ public class Start
 	@Instance("SinoCraft")
 	public static Start instance;
 	
-	@SidedProxy(clientSide = "SinoCraft.proxy.ClientProxy", serverSide = "SinoCraft.proxy.ServerProxy")
+	@SidedProxy(clientSide = "SinoCraft.Proxy.ClientProxy", serverSide = "SinoCraft.Proxy.ServerProxy")
 	public static ServerProxy proxy;
 	
 	@Init
@@ -30,19 +28,9 @@ public class Start
 	{
 		proxy.Sino();
 		
-		int blockPeonyId = 501;
-		Block blockPeony = new BlockPeony(blockPeonyId);
-		ModLoader.registerBlock(blockPeony);
-		ModLoader.addName(blockPeony, "Äµµ¤");
-		
-		int blockChrysanthemumId = 502;
-		Block blockChrysanthemum = new BlockChrysanthemum(blockChrysanthemumId);
-		ModLoader.registerBlock(blockChrysanthemum);
-		ModLoader.addName(blockChrysanthemum, "¾Õ»¨");
-		
-		int BlockPrunusMumeId = 503;
-		Block BlockPrunusMume = new BlockPrunusMume(BlockPrunusMumeId);
-		ModLoader.registerBlock(BlockPrunusMume);
-		ModLoader.addName(BlockPrunusMume, "Ã·»¨Ö¦");
+		int BlockPeonyId = 501;
+		Block BlockPeony = new BlockPeony(BlockPeonyId);
+		ModLoader.registerBlock(BlockPeony);
+		ModLoader.addName(BlockPeony, "Äµµ¤");
 	}
 }

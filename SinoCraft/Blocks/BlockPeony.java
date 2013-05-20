@@ -1,4 +1,4 @@
-package SinoCraft.blocks;
+package SinoCraft.Blocks;
 
 import java.util.Random;
 import cpw.mods.fml.relauncher.Side;
@@ -16,9 +16,9 @@ import net.minecraft.world.IBlockAccess;
 
 public class BlockPeony extends BlockFlower
 {
-	public BlockPeony(int Id)
+	public BlockPeony(int par1)
 	{
-		super(Id, Material.plants);
+		super(par1, Material.plants);
 		
 		setStepSound(soundGrassFootstep);
 	}
