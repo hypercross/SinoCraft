@@ -13,10 +13,11 @@ import net.minecraft.item.ItemPiston;
 import net.minecraft.src.ModLoader;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
-public class BlockPeony extends BlockFlower
+public class BlockChrysanthemum extends BlockFlower
 {
-	public BlockPeony(int Id)
+	public BlockChrysanthemum(int Id)
 	{
 		super(Id, Material.plants);
 		
@@ -34,11 +35,11 @@ public class BlockPeony extends BlockFlower
 	{
 		return 1; //使用交叉渲染
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister i)
 	{
-		blockIcon = i.registerIcon("SinoCraft:BlockPeony"); //1.5对材质的使用做了更改
+		blockIcon = i.registerIcon("SinoCraft:BlockChrysanthemum"); //1.5对材质的使用做了更改
 	}
 }
