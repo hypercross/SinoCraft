@@ -1,4 +1,4 @@
-package SinoCraft.Proxy;
+package SinoCraft.proxy;
 
 public class ServerProxy
 {
